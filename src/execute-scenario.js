@@ -10,7 +10,7 @@ module.exports = interactions => interactions
             if (!returnedJson) {
                 return true
             }
-            else if (interaction.response && compare.isJsonStructureCompatible(interaction.response.body, returnedJson)) {
+            else if (interaction.response && compare.isJsonCompatible(interaction.response.body, returnedJson)) {
                 return true
             }
             else if (interaction.response) {

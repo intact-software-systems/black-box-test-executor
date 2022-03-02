@@ -2,36 +2,19 @@ function isObject(expectedValue, key) {
     return expectedValue[key] instanceof Object || Array.isArray(expectedValue[key])
 }
 
-function isBasicField(expectedValue, key) {
-    return isObject(expectedValue, key) === false
-}
-
-function isCompatible(expected, actual, compareValues) {
+function isCompatible(expected, actual) {
     if (Array.isArray(expected)) {
-        return Array.isArray(actual) && expected.length === actual.length
+        return Array.isArray(actual)
     }
 
-    const ret = Object.keys(expected)
-        .map(key => {
-            if (actual.hasOwnProperty(key)) {
-
-                if (compareValues && isBasicField(expected, key)) {
-                    return expected[key] === actual[key]
-                }
-
-                return true
-            }
-
-            return false
-        })
-
-    const find = ret.find(a => a === false)
-    return find === undefined
+    return Object.keys(expected)
+        .map(key => actual.hasOwnProperty(key))
+        .find(a => a === false) === undefined
 }
 
-function compareJsons(expected, actual, compareValues) {
+function compareJsons(expected, actual) {
 
-    if (!isCompatible(expected, actual, compareValues)) {
+    if (!isCompatible(expected, actual)) {
         return false
     }
 
@@ -46,12 +29,9 @@ function compareJsons(expected, actual, compareValues) {
 
                     if (isObject(expectedValue, key)) {
 
-                        if (!compareJsons(expectedValue[key], actualValue[key], compareValues)) {
+                        if (!compareJsons(expectedValue[key], actualValue[key])) {
                             return false
                         }
-                    }
-                    else if (compareValues && expectedValue[key] !== actualValue[key]) {
-                        return false
                     }
                 }
             }
@@ -62,16 +42,12 @@ function compareJsons(expected, actual, compareValues) {
 
             if (isObject(expected, key) && expected[key] && actual[key]) {
 
-                if (!compareJsons(expected[key], actual[key], compareValues)) {
+                if (!compareJsons(expected[key], actual[key])) {
                     return false
                 }
             }
             else if (!actual.hasOwnProperty(key)) {
                 return false
-            }
-
-            if (compareValues && isBasicField(expected, key)) {
-                return expected[key] === actual[key]
             }
         }
     }
@@ -80,6 +56,5 @@ function compareJsons(expected, actual, compareValues) {
 }
 
 export default {
-    isJsonStructureCompatible: (expected, actual) => compareJsons(expected, actual, false),
-    isJsonStructureAndValuesAsExpected: (expected, actual) => compareJsons(expected, actual, true)
+    isJsonCompatible: (expected, actual) => compareJsons(expected, actual)
 }

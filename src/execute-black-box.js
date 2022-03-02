@@ -1,5 +1,6 @@
 import api from './api-service.js'
 import compare from './compareJsonStructure.js'
+import compareValue from './compareJsonByValue.js'
 
 const SUCCESS = 'SUCCESS'
 const FAILURE = 'FAILURE'
@@ -45,17 +46,17 @@ function executeInteraction(index, interaction) {
                     return toStatus('Server with no body in response. Expects a body.', returnedJson, res, interaction, FAILURE)
                 }
                 else {
-                    if (!compare.isJsonStructureCompatible(interaction.response.body, returnedJson)) {
+                    if (!compare.isJsonCompatible(interaction.response.body, returnedJson)) {
                         return toStatus('Expected response incompatible with actual response', returnedJson, res, interaction, FAILURE)
                     }
 
-                    if (!compare.isJsonStructureAndValuesAsExpected(interaction.response.body, returnedJson)) {
+                    if (!compareValue.isJsonCompatible(interaction.response.body, returnedJson)) {
                         return toStatus('Expected response not the same as actual response', returnedJson, res, interaction, FAILURE)
                     }
                 }
             }
 
-            if (interaction?.response?.statusCode && interaction.response.statusCode !== res.status) {
+            if (interaction?.response?.statusCode && Number.parseInt(interaction.response.statusCode) !== res.status) {
                 return toStatus('Expected responseCode not the same as actual responseCode', returnedJson, res, interaction, FAILURE)
             }
 
