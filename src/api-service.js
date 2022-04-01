@@ -1,5 +1,11 @@
 import fetch from 'node-fetch'
 
+function toBody(request) {
+    return request.body && request.method !== 'GET'
+        ? JSON.stringify(request.body)
+        : undefined
+}
+
 export default {
     fetchData: request => {
         const opts = {
@@ -7,7 +13,7 @@ export default {
             credentials: 'omit',
             mode: 'cors',
             headers: request.headers,
-            body: request.body ? JSON.stringify(request.body) : undefined
+            body: toBody(request)
         }
 
         return fetch(request.path, opts)
@@ -32,7 +38,7 @@ export default {
                 credentials: 'omit',
                 mode: 'cors',
                 headers: request.headers,
-                body: request.body ? JSON.stringify(request.body) : undefined
+                body: toBody(request)
             }
         )
 }

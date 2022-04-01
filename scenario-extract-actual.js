@@ -20,11 +20,6 @@ program.parse(process.argv)
 
 const results = utils.openFile(program.opts().result)
 
-const STATUS = {
-    SUCCESS: 'SUCCESS',
-    FAILURE: 'FAILURE'
-}
-
 const actualResponses = Object.keys(results)
     .map(key => {
         return {

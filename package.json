@@ -5,7 +5,14 @@
   "scripts": {
     "test": "jest test/",
     "start": "node scenario-execute.js --scenario test-data/scenario.json",
-    "start-black-box": "node scenario-black-box-execute.js --scenario test-data/scenario.json"
+    "start-black-box": "node scenario-black-box-execute.js --scenario test-data/scenario.json",
+    "start-results-is-success": "node scenario-results-is-success.js --result test-data/results.json",
+    "extract-actual-from-results": "node scenario-extract-actual.js --result test-data/results.json",
+    "scenario-results-comparison": "node scenario-results-comparison.js --result test-data/results.json",
+    "prism-mock": "prism mock test-data/openapi.json --cors=false --port=4010",
+    "prism-proxy": "prism proxy test-data/openapi.json http://localhost:8080/led/api/v1 --errors --cors=false --port=4010",
+    "contract-check-without-prism": "node scenario-contract-check.js --contract ./test-data/scenario.json",
+    "contract-check-with-prism": "node scenario-contract-check.js --contract ./test-data/scenario.json --openapi ./test-data/openapi.json"
   },
   "dependencies": {
     "commander": "^9.0.0",
@@ -19,6 +26,10 @@
   },
   "bin": {
     "scenario-execute": "scenario-execute.js",
-    "scenario-black-box-execute": "scenario-black-box-execute.js"
+    "scenario-black-box-execute": "scenario-black-box-execute.js",
+    "scenario-results-is-success": "scenario-results-is-success.js",
+    "scenario-extract-actual": "scenario-extract-actual.js",
+    "scenario-results-comparison": "scenario-results-comparison.js",
+    "scenario-contract-check": "scenario-contract-check.js"
   }
 }
