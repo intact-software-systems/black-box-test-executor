@@ -45,10 +45,6 @@ function isCompatibleArrays(expected, actual) {
         return false
     }
 
-    if (expected.length !== actual.length) {
-        return false
-    }
-
     const expectedFound = []
     const actualToCompare = [...actual]
 

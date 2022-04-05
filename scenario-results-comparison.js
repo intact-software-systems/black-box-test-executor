@@ -30,7 +30,7 @@ const results = utils.openFile(program.opts().result)
 
 const isFailure = Object.keys(results)
     .map(key => compare.isJsonCompatible(results[key].expected.body, results[key].actual.body))
-    .some(testResult => testResult === false)
+    .some(testResult => testResult !== true)
 
 console.log(isFailure ? STATUS.FAILURE : STATUS.SUCCESS)
 
