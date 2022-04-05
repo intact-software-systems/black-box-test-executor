@@ -1,3 +1,37 @@
+function isValueEqual(expected, actual) {
+    if (!expected && !actual) {
+        return true
+    }
+
+    if (!expected && actual) {
+        return false
+    }
+
+    if (expected && !actual) {
+        return false
+    }
+
+    if (Number.isFinite(expected) && !Number.isFinite(actual)) {
+        if (Number.isInteger(actual)) {
+            return Number.parseInt(actual) === expected
+        }
+        else {
+            return Number.parseFloat(actual) === expected
+        }
+    }
+
+    if (!Number.isFinite(expected) && Number.isFinite(actual)) {
+        if (Number.isInteger(actual)) {
+            return Number.parseInt(expected) === actual
+        }
+        else {
+            return Number.parseFloat(expected) === actual
+        }
+    }
+
+    return expected === actual
+}
+
 function isCompatibleObjects(expected, actual) {
     if (Array.isArray(expected)) {
         return isCompatibleArrays(expected, actual)
@@ -31,7 +65,7 @@ function isCompatibleObjects(expected, actual) {
                 return false
             }
 
-            if (expected[key] !== actual[key]) {
+            if (!isValueEqual(expected[key], actual[key])) {
                 return false
             }
         }
