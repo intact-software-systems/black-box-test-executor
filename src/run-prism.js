@@ -11,7 +11,7 @@ export default (openapiJson, port) => {
 
         let resolvePromise = true
 
-        prism.on('error', () => {
+        prism.on('error', err => {
             reject(undefined)
         })
 

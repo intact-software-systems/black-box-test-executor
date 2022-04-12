@@ -32,9 +32,9 @@ function isValueEqual(expected, actual) {
     return expected === actual
 }
 
-function isCompatibleObjects(expected, actual) {
+function isCompatibleObjects(expected, actual, compareValues = true) {
     if (Array.isArray(expected)) {
-        return isCompatibleArrays(expected, actual)
+        return isCompatibleArrays(expected, actual, compareValues)
     }
 
     for (const key of Object.keys(expected)) {
@@ -45,7 +45,7 @@ function isCompatibleObjects(expected, actual) {
                 return false
             }
 
-            if (!isCompatibleObjects(expected[key], actual[key])) {
+            if (!isCompatibleObjects(expected[key], actual[key], compareValues)) {
                 return false
             }
         }
@@ -55,7 +55,7 @@ function isCompatibleObjects(expected, actual) {
                 return false
             }
 
-            if (!isCompatibleArrays(expected[key], actual[key])) {
+            if (!isCompatibleArrays(expected[key], actual[key], compareValues)) {
                 return false
             }
         }
@@ -65,7 +65,7 @@ function isCompatibleObjects(expected, actual) {
                 return false
             }
 
-            if (!isValueEqual(expected[key], actual[key])) {
+            if (compareValues && !isValueEqual(expected[key], actual[key])) {
                 return false
             }
         }
@@ -74,7 +74,7 @@ function isCompatibleObjects(expected, actual) {
 }
 
 
-function isCompatibleArrays(expected, actual) {
+function isCompatibleArrays(expected, actual, compareValues = true) {
     if (!Array.isArray(actual)) {
         return false
     }
@@ -93,11 +93,11 @@ function isCompatibleArrays(expected, actual) {
             const actualValue = actualToCompare[i]
 
             if (Array.isArray(expectedValue)) {
-                if (!isCompatibleArrays(expectedValue, actualValue)) {
+                if (!isCompatibleArrays(expectedValue, actualValue, compareValues)) {
                     return false
                 }
             }
-            else if (isCompatibleObjects(expectedValue, actualValue)) {
+            else if (isCompatibleObjects(expectedValue, actualValue, compareValues)) {
                 expectedFound.push(expectedValue)
                 actualToCompare[i] = undefined
             }
@@ -110,6 +110,11 @@ function isCompatibleArrays(expected, actual) {
 export default {
     isJsonCompatible: (expected, actual) =>
         Array.isArray(expected)
-            ? isCompatibleArrays(expected, actual)
-            : isCompatibleObjects(expected, actual)
+            ? isCompatibleArrays(expected, actual, true)
+            : isCompatibleObjects(expected, actual, true),
+
+    isJsonStructureCompatible: (expected, actual) =>
+        Array.isArray(expected)
+            ? isCompatibleArrays(expected, actual, false)
+            : isCompatibleObjects(expected, actual, false)
 }

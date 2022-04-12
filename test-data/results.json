@@ -1,0 +1,920 @@
+{
+  "5": {
+    "test": "FAILURE",
+    "result": "Expected response incompatible with actual response",
+    "method": "GET",
+    "path": "http://127.0.0.1:8080/api/v1/account/NO5120969400372/interest",
+    "expected": {
+      "body": {
+        "productId": "221539100828192276",
+        "currencyCode": "NOK",
+        "lastCalculatedDate": "2022-03-09",
+        "interestTypes": [
+          {
+            "interestTypeCode": "LED_INTR_CRE",
+            "interestSubTypes": [
+              {
+                "interestSubTypeCode": "BASE",
+                "interestStatus": "A",
+                "accruedAmount": {
+                  "amount": "36.98631",
+                  "currency": "NOK"
+                },
+                "accruedAmountLocal": {
+                  "amount": "36.98631",
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "rates": [
+                  {
+                    "rate": "10",
+                    "validFromDateIncl": "2022-01-01",
+                    "validToDateIncl": "2022-02-09",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": "10",
+                    "validFromDateIncl": "2022-02-10",
+                    "validToDateIncl": "2022-02-14",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": "10",
+                    "validFromDateIncl": "2022-02-15",
+                    "validToDateIncl": "2022-02-28",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": "10",
+                    "validFromDateIncl": "2022-03-01",
+                    "validToDateIncl": "9999-12-31",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  }
+                ]
+              },
+              {
+                "interestSubTypeCode": "MARGIN",
+                "interestStatus": "A",
+                "accruedAmount": {
+                  "amount": "-7.39728",
+                  "currency": "NOK"
+                },
+                "accruedAmountLocal": {
+                  "amount": "-7.39728",
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "rates": [
+                  {
+                    "rate": "-2",
+                    "validFromDateIncl": "2022-01-01",
+                    "validToDateIncl": "9999-12-31",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "isDummy": false
+                  }
+                ]
+              }
+            ],
+            "capitalisationFrequencies": [
+              {
+                "isFrequencyOverridden": true,
+                "capitalisationOnHolidayMethod": "NEXT_BANK_DAY",
+                "validFromDateInclusive": "2022-01-01",
+                "validToDateInclusive": "9999-12-31",
+                "frequency": "MONTHLY"
+              }
+            ]
+          }
+        ]
+      },
+      "statusCode": "200"
+    },
+    "actual": {
+      "body": {
+        "productId": "221539100828192276",
+        "currencyCode": "NOK",
+        "lastCalculatedDate": "2022-03-09",
+        "accountVersion": 4,
+        "interestTypes": [
+          {
+            "interestTypeCode": "LED_INTR_CRE",
+            "nextCapitalisationDate": "2022-03-31",
+            "interestSubTypes": [
+              {
+                "interestSubTypeCode": "BASE",
+                "interestStatus": "A",
+                "accruedAmount": {
+                  "amount": 36.98631,
+                  "currency": "NOK"
+                },
+                "accruedAmountLocal": {
+                  "amount": 36.98631,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "rates": [
+                  {
+                    "rate": 10,
+                    "validFromDateIncl": "2022-01-01",
+                    "validToDateIncl": "2022-02-09",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": 10,
+                    "validFromDateIncl": "2022-02-10",
+                    "validToDateIncl": "2022-02-14",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": 10,
+                    "validFromDateIncl": "2022-02-15",
+                    "validToDateIncl": "2022-02-28",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": 10,
+                    "validFromDateIncl": "2022-03-01",
+                    "validToDateIncl": "9999-12-31",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  }
+                ]
+              },
+              {
+                "interestSubTypeCode": "MARGIN",
+                "interestStatus": "A",
+                "accruedAmount": {
+                  "amount": -7.39728,
+                  "currency": "NOK"
+                },
+                "accruedAmountLocal": {
+                  "amount": -7.39728,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "rates": [
+                  {
+                    "rate": -2,
+                    "validFromDateIncl": "2022-01-01",
+                    "validToDateIncl": "9999-12-31",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "isDummy": false
+                  }
+                ]
+              }
+            ],
+            "capitalisationFrequencies": [
+              {
+                "isFrequencyOverridden": true,
+                "capitalisationOnHolidayMethod": "NEXT_BANK_DAY",
+                "validFromDateInclusive": "2022-01-01",
+                "validToDateInclusive": "9999-12-31",
+                "frequency": "MONTHLY"
+              }
+            ]
+          }
+        ]
+      },
+      "statusCode": 200,
+      "statusText": "OK"
+    }
+  },
+  "6": {
+    "test": "FAILURE",
+    "result": "Expected response incompatible with actual response",
+    "method": "GET",
+    "path": "http://127.0.0.1:8080/api/v1/account/NO2920961856064/interest",
+    "expected": {
+      "body": {
+        "productId": "23456789012345678",
+        "currencyCode": "NOK",
+        "lastCalculatedDate": "2022-03-09",
+        "interestTypes": [
+          {
+            "interestTypeCode": "LED_INTR_CRE",
+            "interestSubTypes": [
+              {
+                "interestSubTypeCode": "BASE",
+                "interestStatus": "A",
+                "accruedAmount": {
+                  "amount": "36.98631",
+                  "currency": "NOK"
+                },
+                "accruedAmountLocal": {
+                  "amount": "36.98631",
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "rates": [
+                  {
+                    "rate": "10",
+                    "validFromDateIncl": "2022-01-01",
+                    "validToDateIncl": "2022-02-09",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": "10",
+                    "validFromDateIncl": "2022-02-10",
+                    "validToDateIncl": "2022-02-14",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": "10",
+                    "validFromDateIncl": "2022-02-15",
+                    "validToDateIncl": "2022-02-28",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": "10",
+                    "validFromDateIncl": "2022-03-01",
+                    "validToDateIncl": "9999-12-31",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  }
+                ]
+              },
+              {
+                "interestSubTypeCode": "MARGIN",
+                "interestStatus": "A",
+                "accruedAmount": {
+                  "amount": "-7.39728",
+                  "currency": "NOK"
+                },
+                "accruedAmountLocal": {
+                  "amount": "-7.39728",
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "rates": [
+                  {
+                    "rate": "-2",
+                    "validFromDateIncl": "2022-01-01",
+                    "validToDateIncl": "9999-12-31",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "isDummy": false
+                  }
+                ]
+              }
+            ],
+            "capitalisationFrequencies": [
+              {
+                "isFrequencyOverridden": true,
+                "capitalisationOnHolidayMethod": "NEXT_BANK_DAY",
+                "validFromDateInclusive": "2022-01-01",
+                "validToDateInclusive": "9999-12-31",
+                "frequency": "MONTHLY"
+              }
+            ]
+          }
+        ]
+      },
+      "statusCode": "200"
+    },
+    "actual": {
+      "body": {
+        "productId": "23456789012345678",
+        "currencyCode": "NOK",
+        "lastCalculatedDate": "2022-03-09",
+        "accountVersion": 4,
+        "interestTypes": [
+          {
+            "interestTypeCode": "LED_INTR_CRE",
+            "nextCapitalisationDate": "2022-03-31",
+            "interestSubTypes": [
+              {
+                "interestSubTypeCode": "BASE",
+                "interestStatus": "A",
+                "accruedAmount": {
+                  "amount": 36.98631,
+                  "currency": "NOK"
+                },
+                "accruedAmountLocal": {
+                  "amount": 36.98631,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "rates": [
+                  {
+                    "rate": 10,
+                    "validFromDateIncl": "2022-01-01",
+                    "validToDateIncl": "2022-02-09",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": 10,
+                    "validFromDateIncl": "2022-02-10",
+                    "validToDateIncl": "2022-02-14",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": 10,
+                    "validFromDateIncl": "2022-02-15",
+                    "validToDateIncl": "2022-02-28",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  },
+                  {
+                    "rate": 10,
+                    "validFromDateIncl": "2022-03-01",
+                    "validToDateIncl": "9999-12-31",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "referenceInformation": {
+                      "fixedDaysCountConvention": "BANK_DAYS",
+                      "referenceTypeCode": "URI1M",
+                      "calculateNegativeCustomerRate": false,
+                      "fixedDays": 0,
+                      "calculateNegativeInterestRate": false,
+                      "referenceRateDate": "2021-12-10",
+                      "adjustmentFrequency": "WEEKLY",
+                      "maturity": "1M",
+                      "collarFloorOverridden": false,
+                      "collarCapOverridden": false,
+                      "referenceTypeOverridden": true,
+                      "nextAdjustmentDate": "2022-04-01",
+                      "adjustmentFrequencyOverridden": false
+                    },
+                    "isDummy": false
+                  }
+                ]
+              },
+              {
+                "interestSubTypeCode": "MARGIN",
+                "interestStatus": "A",
+                "accruedAmount": {
+                  "amount": -7.39728,
+                  "currency": "NOK"
+                },
+                "accruedAmountLocal": {
+                  "amount": -7.39728,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyAdjustedAccruedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "capitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmount": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "manuallyCapitalizedAmountLocal": {
+                  "amount": 0,
+                  "currency": "NOK"
+                },
+                "rates": [
+                  {
+                    "rate": -2,
+                    "validFromDateIncl": "2022-01-01",
+                    "validToDateIncl": "9999-12-31",
+                    "denominator": "CAL",
+                    "numerator": "CAL",
+                    "tierThresholdInclusive": 0,
+                    "calculationThresholdInclusive": 0,
+                    "thresholdValueType": "AMOUNT",
+                    "isOverridden": "N",
+                    "calculationBasis": "DAILY_EOD_BALANCE",
+                    "isDummy": false
+                  }
+                ]
+              }
+            ],
+            "capitalisationFrequencies": [
+              {
+                "isFrequencyOverridden": true,
+                "capitalisationOnHolidayMethod": "NEXT_BANK_DAY",
+                "validFromDateInclusive": "2022-01-01",
+                "validToDateInclusive": "9999-12-31",
+                "frequency": "MONTHLY"
+              }
+            ]
+          }
+        ]
+      },
+      "statusCode": 200,
+      "statusText": "OK"
+    }
+  }
+}

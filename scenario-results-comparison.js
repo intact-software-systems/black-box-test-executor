@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import utils from './src/utils.js'
-import compare from './src/compareJsonByValue.js'
+import compare from './src/compareJson.js'
 
 import {Command} from 'commander'
 
