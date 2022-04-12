@@ -27,13 +27,19 @@ program.parse(process.argv)
 
 const results = utils.openFile(program.opts().result)
 
+{
+    const isFailure = Object.keys(results)
+        .map(key => compare.isJsonStructureCompatible(results[key].expected.body, results[key].actual.body))
+        .some(testResult => testResult !== true)
 
-const isFailure = Object.keys(results)
-    .map(key => compare.isJsonCompatible(results[key].expected.body, results[key].actual.body))
-    .some(testResult => testResult !== true)
+    console.log('Json structure comparison:', isFailure ? STATUS.FAILURE : STATUS.SUCCESS)
+}
 
-console.log(isFailure ? STATUS.FAILURE : STATUS.SUCCESS)
+{
+    const isFailure = Object.keys(results)
+        .map(key => compare.isJsonCompatible(results[key].expected.body, results[key].actual.body))
+        .some(testResult => testResult !== true)
 
-process.exit(isFailure)
-
+    console.log('Json value comparison:', isFailure ? STATUS.FAILURE : STATUS.SUCCESS)
+}
 

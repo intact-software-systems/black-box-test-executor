@@ -79,6 +79,10 @@ function isCompatibleArrays(expected, actual, compareValues = true) {
         return false
     }
 
+    if (expected.length > actual.length) {
+        return false
+    }
+
     const expectedFound = []
     const actualToCompare = [...actual]
 
@@ -104,7 +108,9 @@ function isCompatibleArrays(expected, actual, compareValues = true) {
         }
     }
 
-    return expectedFound.length === expected.length
+    return compareValues
+        ? expectedFound.length === expected.length
+        : expectedFound.length >= expected.length
 }
 
 export default {
