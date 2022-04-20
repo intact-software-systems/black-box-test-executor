@@ -1,7 +1,25 @@
 {
-  "name": "test-scenario",
+  "name": "black-box-test-tool",
   "version": "1.0.0",
   "type": "module",
+  "description": "Black box test tool",
+  "author": {
+    "name": "Knut-Helge Vik",
+    "email": "intact.software.systems@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intact-software-systems/black-box-test-tool.git"
+  },
+  "keywords": [
+    "test",
+    "black-box",
+    "tool"
+  ],
+  "bugs": {
+    "url": "https://github.com/intact-software-systems/black-box-test-tool/issues"
+  },
+  "homepage": "https://github.com/intact-software-systems/black-box-test-tool#readme",
   "scripts": {
     "test": "jest test/",
     "start": "node scenario-execute.js --scenario test-data/scenario.json",
