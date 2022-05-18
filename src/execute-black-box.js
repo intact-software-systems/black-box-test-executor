@@ -34,11 +34,11 @@ function executeInteraction(index, interaction) {
     return api
         .fetchDataBasic(interaction.request)
         .then(async res => {
-            if (!res.ok) {
-                return toStatus('Server request failed.', {}, res, interaction, FAILURE)
-            }
-
             const returnedJson = await toJson(res)
+
+            if (!res.ok) {
+                return toStatus('Server request failed.', returnedJson, res, interaction, FAILURE)
+            }
 
             if (interaction?.response?.body) {
                 if (!returnedJson) {
