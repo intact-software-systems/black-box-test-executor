@@ -3,11 +3,11 @@ function isValueEqual(expected, actual) {
         return true
     }
 
-    if (!expected && actual) {
+    if (expected === undefined && actual) {
         return false
     }
 
-    if (expected && !actual) {
+    if (expected && actual === undefined) {
         return false
     }
 
