@@ -1,6 +1,6 @@
 {
   "name": "black-box-test-tool",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "type": "module",
   "description": "Black box test tool",
   "author": {

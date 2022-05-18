@@ -35,7 +35,7 @@ function executeInteraction(index, interaction) {
         .fetchDataBasic(interaction.request)
         .then(async res => {
             if (!res.ok) {
-                throw res.statusText
+                return toStatus('Server request failed.', {}, res, interaction, FAILURE)
             }
 
             const returnedJson = await toJson(res)
@@ -99,7 +99,7 @@ function executeBlackBox(interactions, index) {
         }
     }
 
-    return executeInteraction(index, toInteraction(interactions, index))
+    return executeInteraction(index + 1, toInteraction(interactions, index))
         .then(data => executeNext(data))
         .catch(e => executeNext(e))
 }
